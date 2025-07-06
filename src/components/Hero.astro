@@ -1,13 +1,56 @@
 <div class="parent">
-  <div class="div1">Name</div>
-  <div class="div2">Photo</div>
-  <div class="div7">Little description</div>
+  <div class="name">
+    <h1>SANTIAGO FRANCO</h1>
+  </div>
+  <div class="profile-photo">
+    <div class="photo-container">
+      <img src="../../public/profile-photo.jpeg" alt="logo" />
+    </div>
+  </div>
+  <div class="details">
+    <div class="profession">
+      <aside>
+        <h3>Profession</h3>
+      </aside>
+      <p>
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sequi est
+        obcaecati hic quasi ab et quibusdam, tempore minus unde magnam
+        reiciendis quas placeat? Alias, fugiat reiciendis. Eveniet est enim
+        nisi. Eligendi quibusdam quo distinctio aperiam repellat nihil totam
+        dicta similique in voluptatibus, dignissimos accusamus obcaecati nostrum
+        adipisci sed, vitae voluptatem autem earum deleniti expedita? Autem, id.
+        Consequuntur eveniet ea mollitia.
+      </p>
+    </div>
+
+    <div class="Speciality">
+      <aside>
+        <h3>Speciality</h3>
+      </aside>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea minima
+        explicabo, suscipit ex commodi numquam non tempora quaerat, illum sint
+        iste ullam deleniti similique voluptatibus! Rem, consectetur vero?
+        Explicabo, voluptates? Ex optio hic non ratione ut corrupti, est cumque
+        delectus dolores ipsa quod quae, autem magni eligendi quidem atque,
+        rerum qui! Iure adipisci repellendus neque fuga maxime commodi dolores
+        quidem? Eveniet quas iste error alias laudantium, fugit nemo, numquam
+        eum earum corporis atque necessitatibus nam soluta amet dignissimos
+        perspiciatis totam harum provident. Exercitationem consectetur neque
+        beatae aliquid aut, quam inventore.
+      </p>
+    </div>
+  </div>
 </div>
 
 <style>
+  @font-face {
+    font-family: "TheLastShuriken";
+    src: url("../../public/fonts/TheLastShuriken.ttf") format("truetype");
+  }
   .parent {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(5, 1fr);
     grid-template-rows: repeat(3, 1fr);
     gap: 9px;
     margin-top: 40px;
@@ -16,20 +59,63 @@
   }
 
   .parent div {
-    border: 2px solid black;
+    background-color: #1e1e1e;
+    border-radius: 10px;
   }
 
-  .div1 {
+  .name {
+    font-family: "TheLastShuriken";
+    font-size: 30px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
     grid-column: span 3 / span 3;
+    text-shadow: 2px 2px 0#9224F2;
   }
 
-  .div2 {
-    grid-column-start: 4;
+  .profile-photo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    grid-column: span 2;
   }
 
-  .div7 {
-    grid-column: span 4 / span 4;
+  .profile-photo .photo-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 200px;
+    height: 200px;
+    border-radius: 100%;
+    border: 2px solid #a3f7bf;
+    overflow: hidden;
+  }
+
+  .profile-photo .photo-container img {
+    object-fit: contain;
+    width: 100%;
+    height: 100%;
+  }
+
+  .details {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    grid-column: span 5 / span 5;
     grid-row: span 2 / span 2;
     grid-row-start: 2;
+  }
+
+  .details h3 {
+    font-family: "TheLastShuriken";
+    font-size: 40px;
+    text-shadow: 2px 2px 0#9224F2;
+    margin-bottom: 0px;
+  }
+
+  .profession {
+    margin-bottom: 50px;
   }
 </style>
