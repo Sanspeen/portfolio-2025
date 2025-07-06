@@ -1,43 +1,44 @@
 <div class="parent">
-  <div class="name">
+  <div class="name glass">
     <h1>SANTIAGO FRANCO</h1>
   </div>
-  <div class="profile-photo">
+  <div class="profile-photo glass">
     <div class="photo-container">
       <img src="../../public/profile-photo.jpeg" alt="logo" />
     </div>
   </div>
-  <div class="details">
+  <div class="details glass">
     <div class="profession">
       <aside>
         <h3>Profession</h3>
       </aside>
       <p>
-        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sequi est
-        obcaecati hic quasi ab et quibusdam, tempore minus unde magnam
-        reiciendis quas placeat? Alias, fugiat reiciendis. Eveniet est enim
-        nisi. Eligendi quibusdam quo distinctio aperiam repellat nihil totam
-        dicta similique in voluptatibus, dignissimos accusamus obcaecati nostrum
-        adipisci sed, vitae voluptatem autem earum deleniti expedita? Autem, id.
-        Consequuntur eveniet ea mollitia.
+        Systems Engineer with over 3.5 years of experience in backend and
+        full-stack development, software architecture, and DevOps. I specialize
+        in building high-availability, scalable systems with Java (8–17), Spring
+        Boot, and microservices, and I’ve worked a lot with cloud platforms like
+        AWS and Azure. In my roles, I’ve led cross-functional teams, mentored
+        other developers, and contributed to big technical decisions on
+        large-scale projects. I’m passionate about clean code, agile practices,
+        and designing robust systems that meet business needs. Right now, I’m
+        looking to take the next step as a Senior Developer or Technical Lead.
       </p>
     </div>
-
     <div class="Speciality">
       <aside>
         <h3>Speciality</h3>
       </aside>
       <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea minima
-        explicabo, suscipit ex commodi numquam non tempora quaerat, illum sint
-        iste ullam deleniti similique voluptatibus! Rem, consectetur vero?
-        Explicabo, voluptates? Ex optio hic non ratione ut corrupti, est cumque
-        delectus dolores ipsa quod quae, autem magni eligendi quidem atque,
-        rerum qui! Iure adipisci repellendus neque fuga maxime commodi dolores
-        quidem? Eveniet quas iste error alias laudantium, fugit nemo, numquam
-        eum earum corporis atque necessitatibus nam soluta amet dignissimos
-        perspiciatis totam harum provident. Exercitationem consectetur neque
-        beatae aliquid aut, quam inventore.
+        I specialize in backend and full-stack development, mainly using Java
+        (versions 8 through 17), Spring Boot, and microservices architecture.
+        I’m also experienced with cloud platforms like AWS and Azure, CI/CD
+        pipelines, and containerized deployments with Docker and Kubernetes. On
+        top of that, I’ve worked a lot on designing scalable and fault-tolerant
+        systems, leading technical discussions, and mentoring other developers.
+        I really enjoy applying clean architecture principles, like hexagonal
+        design, and making sure systems are robust and easy to maintain.
+        Overall, I love bridging technical and business needs to deliver
+        reliable and efficient solutions.
       </p>
     </div>
   </div>
@@ -117,5 +118,32 @@
 
   .profession {
     margin-bottom: 50px;
+  }
+  .glass {
+    backdrop-filter: blur(2px) saturate(180%);
+    border: 1px solid rgba(255, 255, 255, 0.8);
+    border-radius: 2rem;
+    box-shadow:
+      0 8px 32px rgba(31, 38, 135, 0.2),
+      inset 0 4px 20px rgba(255, 255, 255, 0.3);
+  }
+
+  .glass::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 2rem;
+    backdrop-filter: blur(1px);
+    box-shadow:
+      inset -10px -8px 0px -11px rgba(255, 255, 255, 1),
+      inset 0px -9px 0px -8px rgba(255, 255, 255, 1);
+    opacity: 1%;
+    z-index: -1;
+    filter: blur(0.1px) drop-shadow(10px 4px 6px black) brightness(80%);
+    grid-column: span 3 / span 3;
   }
 </style>
