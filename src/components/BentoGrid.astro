@@ -1,10 +1,22 @@
 <div class="parent">
-  <div class="card glass">EXPERIENCE</div>
-  <div class="div2 glass">PROJECTS</div>
-  <div class="div3 glass">CONTACT ME</div>
-  <div class="div4 glass">MY CURRICULUM</div>
-  <div class="div5 glass">EDUCATION</div>
-  <div class="div6 glass">TECHNOLOGIES</div>
+  <div class="card glass saturation">
+    <h1>EXPERIENCE</h1>
+  </div>
+  <div class="div2 glass">
+    <h1>PROJECTS</h1>
+  </div>
+  <div class="div3 glass">
+    <h1>CONTACT ME</h1>
+  </div>
+  <div class="div4 glass">
+    <h1>MY CURRICULUM</h1>
+  </div>
+  <div class="div5 glass">
+    <h1>EDUCATION</h1>
+  </div>
+  <div class="div6 glass">
+    <h1>TECHNOLOGIES</h1>
+  </div>
 </div>
 
 <style>
@@ -23,9 +35,12 @@
     border: 1px solid rgba(255, 255, 255, 0.8);
     border-radius: 2rem;
     box-shadow:
-      0 8px 32px rgba(31, 38, 135, 0.2),
-      inset 0 4px 20px rgba(255, 255, 255, 0.3);
+      2px 12px 30px rgba(31, 38, 135, 0.2),
+      5px 12px 20px rgba(255, 255, 255, 0.3);
+  }
 
+  .saturation:hover {
+    backdrop-filter: blur(2px) saturate(3080%);
   }
 
   .glass::after {
@@ -68,6 +83,8 @@
   }
 
   .div2 {
+    writing-mode: vertical-rl;
+    text-orientation: upright;
     grid-row: span 3 / span 3;
     grid-column-start: 4;
   }

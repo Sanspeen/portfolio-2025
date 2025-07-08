@@ -1,6 +1,7 @@
 <div class="parent">
   <div class="name glass">
     <h1>SANTIAGO FRANCO</h1>
+    <h6 class="typewriter">You have the idea I'll find a way to create it</h6>
   </div>
   <div class="profile-photo glass">
     <div class="photo-container">
@@ -45,6 +46,27 @@
 </div>
 
 <style>
+  /* The typing effect */
+  @keyframes typing {
+    from {
+      width: 0;
+    }
+    to {
+      width: 100%;
+    }
+  }
+
+  /* The typewriter cursor effect */
+  @keyframes blink-caret {
+    from,
+    to {
+      border-color: transparent;
+    }
+    50% {
+      border-color: #4C5C68;
+    }
+  }
+
   @font-face {
     font-family: "TheLastShuriken";
     src: url("../../public/fonts/TheLastShuriken.ttf") format("truetype");
@@ -67,11 +89,30 @@
     font-family: "TheLastShuriken";
     font-size: 30px;
     display: flex;
-    flex-direction: row;
+    margin: 0;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     grid-column: span 3 / span 3;
     text-shadow: 2px 2px #9224f2;
+  }
+
+  .name h1 {
+    margin-bottom: 0%;
+  }
+  .name h6 {
+    margin-top: 2%;
+  }
+
+  .typewriter{
+    overflow: hidden; /* Ensures the content is not revealed until the animation */
+    border-right: 0.15em solid #4C5C68; /* The typwriter cursor */
+    white-space: nowrap; /* Keeps the content on a single line */
+    margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+    letter-spacing: 0.1em; /* Adjust as needed */
+    animation:
+      typing 2.5s steps(40, end),
+      blink-caret 0.75s step-end infinite;
   }
 
   .profile-photo {
